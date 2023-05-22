@@ -6,6 +6,7 @@ require 'init.php';
 
 if ($con) {
     // Hash the user-provided password
+    // password hashing
     $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
 
     $sql = "SELECT name, password FROM user_info WHERE user_name='$user_name'";
